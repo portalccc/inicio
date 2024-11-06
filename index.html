@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+
+<!-- Bem vindo(a) ao Portal CCC -->
+
+
+
+
+<title>Portal CCC</title>
+<meta name="description" content="Portal CCC - Central de Compras Compartilhadas MG" />  
+<meta name="keywords" content="CCC, Compras Públicas, Central de Compras, Minas Gerais" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Código para publicação de links em redes sociais -->
+<meta property="og:title" content="Portal CCC">
+<meta property="og:description" content="Extranet da Central de Compras Compartilhadas.">
+<meta property="og:image" content="https://portalccc.github.io/index/img/logo.png">
+<meta property="og:url" content="https://portalccc.github.io/index">
+<meta property="og:type" content="website">
+
+
+</head>
+  
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/styles.css">
+
+<style>
+
+</style>
+<body class="w3-light-grey">
+
+
+  <div id="header"></div>
+
+
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+  <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">Fechar</a> 
+  <a href="/catalogo/" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Catálogo de Serviços</a>
+  <a href="/transparencia/" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Transparência</a>
+  <a href="/unidades/" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Unidades</a>
+  
+  
+  
+</nav>
+
+<!-- Top menu on small screens -->
+
+
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+  
+  <!-- Photo grid -->
+  <div class="w3-row w3-grayscale-min">
+    <div class="w3-third">
+      <img src="https://portalccc.github.io/index/img/cartadeservicos.png" style="width:100%" onclick= "window.location.href = '/cartadeserviços/index.html';" alt="Saiba mais sobre os Ciclos de Alinhamento Estratégico e de Desempenho">
+   </div>
+    
+   <div class="w3-third">
+      <img src="https://portalccc.github.io/index/img/transparencia.png" style="width:100%" onclick="window.location.href = '/index/transparencia.html';" alt="veja dados de monitoramento do CCC">
+      </div>
+    
+    <div class="w3-third">
+      <img src="https://portalccc.github.io/index/img/unidades.png" style="width:100%" onclick="window.location.href = '/index/unidades.html';" alt="Conheça as unidades que integram o CCC">
+    </div>
+    
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  
+<!-- INÍCIO DO FOOTER -->
+
+<div id="footer"></div>
+  
+<!-- FIM DO FOOTER -->
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+<!--CARREGA COMPONENTS-->
+<script src="js/loadcomponents.js"></script>
+
+
+</body>
+</html>
